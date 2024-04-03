@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using static System.Windows.Forms.AxHost;
+using System.Net.Configuration;
 
 namespace project1
 {
@@ -54,6 +55,7 @@ namespace project1
             return ((MainForm)Application.OpenForms["MainForm"]).customers.ToList();
         }
         public List<Customer> Read(string name)
+        
         {
             List<Customer> ReadResult = new List<Customer>();
             foreach (var item in db.customers.ToList())
@@ -85,10 +87,12 @@ namespace project1
             {
                 if (item.PhoneNumber == Phonenumber)
                 {
-                    item.name = c.name;
-                    item.PhoneNumber = c.PhoneNumber;
-                    return "ویرایش با موفقیت انجام شد ";
+                        item.name =name;
+                        item.PhoneNumber = PhoneNumber;
+
                 }
+                return "ویرایش با موفقیت انجام شد ";
+
             }
             return "مشتری در لیست ثبت نشد";
         }
@@ -106,61 +110,6 @@ namespace project1
             }
             return "مشتری در لیست ثبت نشده است ";
         }
-        //public string Create2(Customer cu)
-        //{
-        //    db1.Customers.Add(cu);
-        //    db1.SaveChanges();
-        //    return "اطلاعات مشتری جدید ثبت شد";
-        //}
-
-        //public bool Exist(Customer cu)
-        //{
-        //    return db1.Customers.Any(i => i.id == cu.id);
-        //}
-        //public long CountTable()
-        //{
-        //    //تعداد ردیف های جدول 
-        //    return db1.Customers.LongCount();
-
-        //}
-        //public Customer Read(int id)
-        //{
-        //    return db1.Customers.Find(id);
-        //    //return db1.Store.Where(i => i.id == id).SingleOrDefault();
-        //}
-        //public List<Customer> Read(string SearchText)
-        //{
-        //    return db1.Customers.Where(i => i.name.Contains(SearchText) || i.name.Contains(SearchText)).ToList();
-        //}
-        //public List<Customer> Read()
-        //{
-        //    return db1.Customers.ToList();
-        //}
-        //public void Update(int id, Customer cu)
-        //{
-        //    var Update = db1.Customers.Where(i => i.id == id).SingleOrDefault();
-        //    if (Update != null)
-        //    {
-        //        Update.name = cu.name;
-        //        Update.PhoneNumber = cu.PhoneNumber;
-        //        db1.SaveChanges();
-        //    }
-
-        //}
-        //public void Delete(int id)
-        //{
-        //    var Delete = db1.Customers.Where(i => i.id == id).Select(i => i).FirstOrDefault();
-        //    db1.Customers.Remove(Delete);
-        //    db1.SaveChanges();
-        //}
-        //public void DeleteAll()
-        //{
-        //    foreach (var item in db1.Customers.ToList())
-        //    {
-        //        var Delete = db1.Customers.Where(i => i.id == item.id).Select(i => i).FirstOrDefault();
-        //        db1.Customers.Remove(Delete);
-        //    }
-        //    db1.SaveChanges();
-        //}
+       
     }
 }

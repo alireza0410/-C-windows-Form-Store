@@ -22,7 +22,7 @@ namespace project1
         
         private void button1_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
+             DB db = new DB();
             Customer c = new Customer();
 
             c.name = textBox1.Text;
@@ -53,7 +53,7 @@ namespace project1
         {
             Customer c= new Customer();
             MessageBox.Show(c.Delete(phonnumber));
-            dataGridView1.DataSource = null;
+            //dataGridView1.DataSource = null;
             dataGridView1.DataSource = c.Read();
         }
 

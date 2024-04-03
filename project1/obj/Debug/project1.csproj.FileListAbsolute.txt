@@ -23,3 +23,6 @@ C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations.Initi
 C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations.DBproduct.resources
 C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations.DBcart.resources
 C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations.cc.resources
+C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations._new.resources
+C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations._2nd.resources
+C:\Users\ASUS\source\repos\project1\project1\obj\Debug\project1.Migrations.test.resources
